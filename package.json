@@ -1,0 +1,19 @@
+{
+  "name": "monorepo-demo",
+  "version": "1.0.0",
+  "description": "a monorepo demo using yarn workspaces",
+  "repository": "git@github.com:yigo/monorepo-demo.git",
+  "author": "Rodrigo Gonzalez <rodrigo.gonzalez@cornershopapp.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "@monorepo-main",
+    "apps/**",
+    "common/**"
+  ],
+  "scripts": {
+    "start" : "yarn workspace main start",
+    "packages:build": "./tools/packages-build.sh",
+    "packages:test": "./tools/packages-test.sh"
+  }
+}
